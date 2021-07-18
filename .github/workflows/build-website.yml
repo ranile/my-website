@@ -27,7 +27,6 @@ jobs:
 
       - name: Build
         run: |
-          cd website
           npm install
           npm run build
 
@@ -35,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: website
-          path: website/build/
+          path: dist
           retention-days: 1
 
       - if: github.event_name == 'pull_request'
