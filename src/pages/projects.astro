@@ -15,10 +15,17 @@ const projects = [
   <head>
     <MainHead title="All Projects | Muhammad Hamza" />
     <style lang="scss">
+      $w-s: 750px;
+
       .grid {
         display: grid;
-        grid-gap: 3rem;
-        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2rem;
+        grid-template-columns: 1fr;
+        
+        @media (min-width: $w-s) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-gap: 3rem;
+        }
       }
 
       a {

@@ -4,6 +4,7 @@ import Main from '../components/MainHead.astro';
 import BlogHeader from '../components/Blog/BlogHeader.astro';
 import BlogPostPreview from '../components/Blog/BlogPostPreview.astro';
 import Nav from '../components/Nav/index.jsx';
+import Footer from '../components/Footer/index.jsx';
 
 // Component Script:
 // You can write any JavaScript/TypeScript that you'd like here.
@@ -81,5 +82,6 @@ allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishD
         </section>
       </article>
     </div>
+    <Footer />
   </body>
 </html>
