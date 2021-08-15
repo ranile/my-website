@@ -9,7 +9,7 @@
 
 .logolink {
   display: block;
-  color: var(--t-fg);
+  color: var(--t-text);
   text-decoration: none;
 }
 
@@ -18,10 +18,7 @@
   display: block;
   margin-left: 1rem;
   text-decoration: none;
-  font-size: var(--f-d1);
   text-transform: uppercase;
-  padding-top: 0.75em;
-  padding-bottom: 0.75em;
 
   &:focus,
   &:hover {
@@ -36,7 +33,7 @@
   width: 2em;
   height: 2em;
   margin-right: 0.5rem;
-  color: var(--c-black);
+  color: var(--t-text);
   font-weight: 900;
   letter-spacing: -0.125rem;
   border: 3px solid currentColor;

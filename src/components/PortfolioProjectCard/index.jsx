@@ -11,11 +11,10 @@ const RepoIcon = (props) => {
 
 function PortfolioPreview({ project }) {
   return (
-    <div className={Styles.container}>
-      <a href={`https://github.com/hamza1311/${project.id}`} className={Styles.link} target="_blank">
+    <a href={`https://github.com/hamza1311/${project.id}`} className={Styles.link} target="_blank">
       <div className={Styles.card}>
         <section className={Styles.title}>
-          <RepoIcon className={Styles.repoIcon} width="32" height="32" />
+          <RepoIcon width="32" height="32" />
           <span>hamza1311/{project.id}</span>
         </section>
 
@@ -24,7 +23,6 @@ function PortfolioPreview({ project }) {
         </p>
       </div>
     </a>
-    </div>
   );
 }
 

@@ -1,15 +1,8 @@
 $w-s: 750px;
 
-.container {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
 .link {
   text-decoration: none;
-  color: var(--theme-text);
+  color: var(--t-text);
   display: block;
   width: 70%;
 
@@ -19,7 +12,7 @@ $w-s: 750px;
   position: relative;
   display: flex;
   align-items: center;
-  border: 1px solid rgba($color: #000000, $alpha: 0.5);
+  border: 1px solid var(--t-text);
   padding: 1em;
   border-radius: 2em;
   flex-direction: column;
@@ -31,8 +24,9 @@ $w-s: 750px;
   }
 }
 
-.repo-icon {
+svg {
   width: 2em;
+  fill: var(--t-text);
 }
 
 .title {

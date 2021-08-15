@@ -17,13 +17,14 @@ const featuredProject = {
 ---
 <html lang="en">
   <head>
-    <MainHead title="Muhammad Hamza" />
+    <MainHead />
     <style lang="scss">
       $w-s: 750px;
 
       .hero {
         position: relative;
         overflow: hidden;
+        color: var(--c-gray-800);
 
         @media (min-width: $w-s) {
           height: 45vw;
@@ -73,12 +74,12 @@ const featuredProject = {
 
       .title {
         font-weight: 900;
-        font-size: var(--f-u8);
+        font-size: 3em;
         margin-bottom: 0.5rem;
         margin-top: 0;
 
         @media (min-width: $w-s) {
-          font-size: var(--f-u12);
+          font-size: 5em;
         }
       }
 
@@ -93,7 +94,7 @@ const featuredProject = {
 
       .sectionTitle {
         font-weight: 700;
-        font-size: var(--f-u8);
+        font-size: 3em;
         margin-top: 4rem;
         margin-bottom: 2rem;
       }
@@ -102,13 +103,13 @@ const featuredProject = {
         position: relative;
         display: inline-block;
         font-weight: 900;
-        color: var(--t-bg);
-        background-color: var(--t-fg);
+        color: var(--t-text);
+        background-color: var(--c-black);
         padding: 0.25em 0.5em;
         z-index: 2;
 
         @media (min-width: $w-s) {
-          font-size: var(--f-u3);
+          font-size: 1.5em;
         }
 
         + .role {
@@ -127,12 +128,6 @@ const featuredProject = {
           }
         }
 
-        &:nth-of-type(3) {
-          .invert {
-            background-color: var(--c-green);
-          }
-        }
-
         &:hover {
           .invert {
             clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
@@ -142,7 +137,7 @@ const featuredProject = {
 
       .invert {
         position: absolute;
-        color: var(--t-fg);
+        color: var(--t-text);
         display: flex;
         align-items: center;
         justify-content: center;
@@ -156,7 +151,7 @@ const featuredProject = {
       }
 
       .desc {
-        font-size: var(--f-u2);
+        font-size: 1.3em;
         margin-top: 1.5rem;
         margin-bottom: 0;
       }
@@ -164,7 +159,7 @@ const featuredProject = {
       .subtitle {
         display: block;
         font-weight: 400;
-        font-size: var(--f-d6);
+        font-size: 0.5em;
         letter-spacing: -0.0625em;
       }
 
@@ -177,7 +172,21 @@ const featuredProject = {
           margin-bottom: 0.5em;
           display: block;
           font-weight: 700;
-          font-size: var(--f-u4);
+          font-size: 1.5em;
+        }
+      }
+
+      .selected-work {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        h3 {
+          align-self: flex-start;
+        }
+
+        a {
+          padding-top: 2em;
         }
       }
 
@@ -193,7 +202,7 @@ const featuredProject = {
           }
 
           article {
-            border: 2px solid rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--t-subdue);
             border-radius: 50%;
             padding: 1em;
             display: flex;
@@ -237,16 +246,14 @@ const featuredProject = {
         <p class="desc">Lover of anime and technology.</p>
       </div>
     </header>
-    <main class="wrapper mt4 mb4">
+    <main class="wrapper">
       <div class="grid">
-        <div class="section">
+        <div class="section selected-work">
           <h3 class="sectionTitle">Selected Work</h3>
           <PortfolioProjectCard project={featuredProject} />
-          <div class="tac mt4">
-            <a href="/projects">
+          <a href="/projects">
               <Button>View All</Button>
-            </a>
-          </div>
+          </a>
         </div>
         <div class="section">
           <h3 class="sectionTitle">About me</h3>

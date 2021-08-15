@@ -13,9 +13,8 @@ const { title, author, publishDate, heroImage } = Astro.props;
 
 <div class="layout">
   <article class="content">
-  <div>
     <header>
-      {heroImage && <img width="720" height="420" class="hero-image" loading="lazy" src={heroImage} />}
+      {heroImage && <img class="hero-image" loading="lazy" src={heroImage} />}
       <p class="publish-date">{publishDate}</p>
       <h1 class="title">{title}</h1>
       <Author name="Muhammad Hamza" href="https://github.com/hamza1311" />
@@ -23,37 +22,11 @@ const { title, author, publishDate, heroImage } = Astro.props;
     <main>
       <slot />
     </main>
-  </article>
 </div>
 
-<style>
-.hero-image {
-  width: 100vw;
-  object-fit: cover;
-  object-position: center;
-  margin-top: 2rem;
-  margin-bottom: 4rem;
-  max-width: 1280px;
-}
-
-@media (max-width: 50em) {
-  .hero-image {
-    height: 260px;
-  margin-top: 0;
-  margin-bottom: 2rem;
-  }
-}
-
-.content {
-  margin-bottom: 8rem;
-}
-
-.content :global(main > * + *) {
-  margin-top: 1rem;
-}
-
-.content :global(h2) {
-  margin-top: 4rem;
+<style lang="scss">
+.layout {
+  padding-bottom: 5em;
 }
 
 header {
@@ -65,22 +38,38 @@ header {
 
   padding-bottom: 2rem;
   margin-bottom: 2rem;
-  border-bottom: 4px solid var(--theme-divider);
+  border-bottom: 4px solid var(--t-divider);
+
+  .hero-image {
+    width: 100vw;
+    object-fit: cover;
+    object-position: top;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+    max-width: 720px;
+    max-height: 420px;
+
+    @media (max-width: 50em) {
+      height: 260px;
+      margin-top: 0;
+      margin-bottom: 2rem;
+    }
+  }
+
+
+  .title, .author, .publish-date {
+    margin: 0.2em;
+  }
+
+  .publish-date, .author {
+    color: var(--t-text-lighter);
+  }
+
+  .title {
+    font-size: 2.25rem;
+    font-weight: 700;
+  }
 }
 
-.title,
-.author,
-.publish-date {
-  margin: 0;
-}
 
-.publish-date,
-.author {
-  color: var(--theme-text-lighter);
-}
-
-.title {
-  font-size: 2.25rem;
-  font-weight: 700;
-}
 </style>
