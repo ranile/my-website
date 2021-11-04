@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    scroll-behavior: smooth;
+}
+
+@layer components {
+    .tag {
+        @apply p-3 shadow-lg text-center
+        hover:scale-110 transition duration-200 ease-in-out;
+    }
+}
