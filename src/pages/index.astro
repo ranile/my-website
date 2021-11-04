@@ -2,9 +2,6 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.tsx'
 import ProjectCard from '../components/ProjectCard.tsx'
-import Tag from '../components/Tag.tsx'
-import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink.tsx'
-
 ---
 
 <html lang="en"> <!-- class="dark" -->
@@ -37,12 +34,7 @@ import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink.tsx
 </head>
 
 <body class="bg-white text-black dark:bg-gray-800 dark:text-white">
-    <Header>
-        <AnimatedBottomBorderLink href="#projects">Projects</AnimatedBottomBorderLink>
-        <AnimatedBottomBorderLink href="#skills">Skills</AnimatedBottomBorderLink>
-        <AnimatedBottomBorderLink href="#contact">Contact</AnimatedBottomBorderLink>
-        <AnimatedBottomBorderLink href="/blog">Blog</AnimatedBottomBorderLink>
-    </Header>
+    <Header />
 
     <main>
         <section class="data-section">

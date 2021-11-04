@@ -20,3 +20,6 @@ yarn-error.log*
 # editor config
 .vscode
 .idea
+
+# firebase
+.firebase/

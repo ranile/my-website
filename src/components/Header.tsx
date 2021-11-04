@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react'
+import AnimatedBottomBorderLink from './AnimatedBottomBorderLink'
 
-export default function Header(props: PropsWithChildren<{}>) {
+export default function Header() {
     return (
         <header className="flex items-center justify-between px-5 md:px-20 py-6 shadow">
             <a href="/">
@@ -9,7 +9,10 @@ export default function Header(props: PropsWithChildren<{}>) {
                 </h3>
             </a>
             <nav className="flex gap-4">
-                {props.children}
+                <AnimatedBottomBorderLink href="/#projects">Projects</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/#skills">Skills</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/#contact">Contact</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/blog">Blog</AnimatedBottomBorderLink>
             </nav>
         </header>
     )
