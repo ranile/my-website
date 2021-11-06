@@ -1,6 +1,8 @@
 ---
 layout: ../../layouts/BlogLayout.astro
 title: Hello Cruel World
+date: Saturday, November 06 2021
+description: A random blog post
 ---
 
 ## A link
