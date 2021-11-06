@@ -1,0 +1,19 @@
+---
+import Head from './BaseHead.astro'
+import Header from '../components/Header.tsx'
+
+const { title = '' } = Astro.props;
+---
+
+<html lang="en" class="dark"> <!--  -->
+<head>
+    <Head title={title} />
+
+    <slot name="styles" />
+</head>
+
+<body class="bg-white text-black dark:bg-gray-800 dark:text-white">
+    <Header />
+    <slot />
+</body>
+</html>

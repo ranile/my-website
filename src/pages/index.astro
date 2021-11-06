@@ -1,15 +1,12 @@
 ---
-import Head from '../components/Head.astro'
+import Head from '../layouts/BaseHead.astro'
 import Header from '../components/Header.tsx'
 import ProjectsList from '../components/ProjectsList.astro'
 import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink'
+import BaseLayout from '../layouts/BaseLayout.astro'
 ---
-
-<html lang="en"> <!-- class="dark" -->
-<head>
-    <Head />
-
-    <style lang="scss">
+<BaseLayout>
+    <style lang="scss" slot="styles">
     .link-button {
         max-height: 48px;
         max-width: 48px;
@@ -24,64 +21,60 @@ import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink'
         @apply flex flex-col gap-10 content-center items-center justify-center mt-24;
     }
     </style>
-</head>
 
-<body class="bg-white text-black dark:bg-gray-800 dark:text-white">
-    <Header />
 
     <main>
-        <section class="data-section">
-            <h1 class="text-center">
-                Hi, I am
-                <span class="text-pink-700">Muhammad Hamza.</span>
-            </h1>
-            <h2>A Web Developer</h2>
-            <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
+    <section class="data-section">
+        <h1 class="text-center">
+            Hi, I am
+            <span class="text-pink-700">Muhammad Hamza.</span>
+        </h1>
+        <h2>A Web Developer</h2>
+        <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
 
-            <div class="flex gap-4 justify-center">
-                <AnimatedBottomBorderLink href="#" className="pb-14 hover:before:w-12">
-                    <img class="link-button" id="resume-icon" src="/icons/resume-icon-dark.svg">
-                </AnimatedBottomBorderLink>
-                <AnimatedBottomBorderLink href="https://github.com/hamza1311/" className="pb-14 hover:before:w-12">
-                    <img class="link-button" src="/icons/GitHub-Dark.png">
-                </AnimatedBottomBorderLink>
-                <AnimatedBottomBorderLink href="https://www.linkedin.com/in/hamza1311/" className="pb-14 hover:before:w-12">
-                    <img class="link-button" src="/icons/LinkedIn.png">
-                </AnimatedBottomBorderLink>
-            </div>
-        </section>
+        <div class="flex gap-4 justify-center">
+            <AnimatedBottomBorderLink href="#" className="pb-14 hover:before:w-12">
+                <img class="link-button" id="resume-icon" src="/icons/resume-icon-dark.svg">
+            </AnimatedBottomBorderLink>
+            <AnimatedBottomBorderLink href="https://github.com/hamza1311/" className="pb-14 hover:before:w-12">
+                <img class="link-button" src="/icons/GitHub-Dark.png">
+            </AnimatedBottomBorderLink>
+            <AnimatedBottomBorderLink href="https://www.linkedin.com/in/hamza1311/" className="pb-14 hover:before:w-12">
+                <img class="link-button" src="/icons/LinkedIn.png">
+            </AnimatedBottomBorderLink>
+        </div>
+    </section>
 
-        <section class="data-section" id="projects">
-            <h2>Projects</h2>
+    <section class="data-section" id="projects">
+        <h2>Projects</h2>
 
-            <ProjectsList />
-        </section>
+        <ProjectsList />
+    </section>
 
 
-        <section class="data-section" id="skills">
-            <h2>Skills</h2>
+    <section class="data-section" id="skills">
+        <h2>Skills</h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
-                <span class="tag">Rust</span>
-                <span class="tag">Yew</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">Next.JS</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
-            </div>
-        </section>
+        <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <span class="tag">Rust</span>
+            <span class="tag">Yew</span>
+            <span class="tag">TypeScript</span>
+            <span class="tag">React</span>
+            <span class="tag">Next.JS</span>
+            <span class="tag">Kotlin</span>
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+        </div>
+    </section>
 
-        <section class="data-section mb-12" id="contact">
-            <h2>Contact</h2>
+    <section class="data-section mb-12" id="contact">
+        <h2>Contact</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-                <a href="mailto:muhammadhamza1311@gmail.com" class="tag">Email</a>
-                <button class="tag">Discord</button>
-                <a href="https://matrix.to/#/@weeb69:matrix.org" target="_blank" class="tag">Matrix</a>
-            </div>
-        </section>
-    </main>
-</body>
-</html>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <a href="mailto:muhammadhamza1311@gmail.com" class="tag">Email</a>
+            <button class="tag">Discord</button>
+            <a href="https://matrix.to/#/@weeb69:matrix.org" target="_blank" class="tag">Matrix</a>
+        </div>
+    </section>
+</main>
+</BaseLayout>

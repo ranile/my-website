@@ -6,10 +6,6 @@ html {
     scroll-behavior: smooth;
 }
 
-body {
-    @apply bg-white text-black dark:bg-gray-800 dark:text-white;
-}
-
 @layer components {
     h1 {
         @apply text-4xl md:text-5xl lg:text-7xl font-bold;
@@ -21,5 +17,12 @@ body {
     .tag {
         @apply p-3 shadow-lg text-center
         hover:scale-110 transition duration-200 ease-in-out;
+    }
+
+    .blog-article a {
+        @apply text-pink-500;
+    }
+    .blog-article a:hover {
+        @apply text-pink-700;
     }
 }
