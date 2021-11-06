@@ -2,6 +2,7 @@
 import Head from '../components/Head.astro'
 import Header from '../components/Header.tsx'
 import ProjectsList from '../components/ProjectsList.astro'
+import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink'
 ---
 
 <html lang="en"> <!-- class="dark" -->
@@ -10,10 +11,10 @@ import ProjectsList from '../components/ProjectsList.astro'
 
     <style lang="scss">
     h1 {
-        @apply text-5xl md:text-7xl font-bold;
+        @apply text-4xl md:text-5xl lg:text-7xl font-bold;
     }
     h2 {
-        @apply text-3xl md:text-5xl;
+        @apply text-2xl md:text-4xl lg:text-5xl;
     }
 
     .link-button {
@@ -21,8 +22,8 @@ import ProjectsList from '../components/ProjectsList.astro'
         max-width: 48px;
 
         &#resume-icon {
-            height: 48px;
-            width: 48px;
+            height: 50px;
+            width: 50px;
         }
     }
     
@@ -46,15 +47,15 @@ import ProjectsList from '../components/ProjectsList.astro'
             <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
 
             <div class="flex gap-4 justify-center">
-                <a href="#">
+                <AnimatedBottomBorderLink href="#" className="pb-14 hover:before:w-12">
                     <img class="link-button" id="resume-icon" src="/icons/resume-icon-dark.svg">
-                </a>
-                <a href="https://github.com/hamza1311/">
+                </AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="https://github.com/hamza1311/" className="pb-14 hover:before:w-12">
                     <img class="link-button" src="/icons/GitHub-Dark.png">
-                </a>
-                <a href="https://www.linkedin.com/in/hamza1311/">
+                </AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="https://www.linkedin.com/in/hamza1311/" className="pb-14 hover:before:w-12">
                     <img class="link-button" src="/icons/LinkedIn.png">
-                </a>
+                </AnimatedBottomBorderLink>
             </div>
         </section>
 

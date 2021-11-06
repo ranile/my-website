@@ -1,6 +1,5 @@
 ---
 import ProjectCard from '../components/ProjectCard.tsx'
-// , '', 'hamza1311/'
 const repos = [
     {
         title: 'Clurry',
@@ -23,7 +22,7 @@ const repos = [
 ]
 ---
 
-<div class="flex flex-col gap-8 md:flex-row md:gap-6">
+<div class="flex flex-col m-4 gap-8 lg:flex-row lg:gap-6">
     {repos.map(({title, link, description, languages}) => (
         <ProjectCard title={title} link={link} description={description} languages={languages} />
     ))}
