@@ -1,0 +1,30 @@
+---
+import ProjectCard from '../components/ProjectCard.tsx'
+// , '', 'hamza1311/'
+const repos = [
+    {
+        title: 'Clurry',
+        link: 'hamza1311/clurry',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo enim asperiores',
+        languages: ['Rust']
+    },
+    {
+        title: 'Gloo',
+        link: 'rustwasm/gloo',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo enim asperiores',
+        languages: ['Rust']
+    },
+    {
+        title: 'Dear Diary',
+        link: 'hamza1311/dear-diary-web',
+        description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo enim asperiores',
+        languages: ['TypeScript']
+    },
+]
+---
+
+<div class="flex flex-col gap-8 md:flex-row md:gap-6">
+    {repos.map(({title, link, description, languages}) => (
+        <ProjectCard title={title} link={link} description={description} languages={languages} />
+    ))}
+</div>
