@@ -1,6 +1,7 @@
 ---
-import ProjectCard from '../components/ProjectCard.tsx'
-const repos = [
+import AnimatedBottomBorderLink from './AnimatedBottomBorderLink.tsx'
+
+const projects = [
     {
         title: 'Clurry',
         link: 'hamza1311/clurry',
@@ -23,7 +24,25 @@ const repos = [
 ---
 
 <div class="flex flex-col m-4 gap-8 lg:flex-row lg:gap-6">
-    {repos.map(({title, link, description, languages}) => (
-        <ProjectCard title={title} link={link} description={description} languages={languages} />
+    {projects.map(it => (
+        <article class="flex flex-col shadow-lg items-center h-56 max-w-sm px-5  gap-5
+            hover:scale-105 transition duration-300 ease-in-out">
+            <h3 class="text-xl font-bold pt-4">
+                {it.title}
+            </h3>
+
+            <p class="text-center">
+                {it.description}
+            </p>
+
+            <section class="flex gap-4">
+                {it.languages.map(lang => <span class="text-sm">{lang}</span>)}
+            </section>
+
+            <AnimatedBottomBorderLink href={`https://github.com/${it.link}`}  className="pb-7 hover:before:w-6">
+                <img style="width: 24px; height: 24px" src="/icons/GitHub-Dark.png" />
+            </AnimatedBottomBorderLink>
+
+    </article>
     ))}
 </div>
