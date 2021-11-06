@@ -6,7 +6,18 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    @apply bg-white text-black dark:bg-gray-800 dark:text-white;
+}
+
 @layer components {
+    h1 {
+        @apply text-4xl md:text-5xl lg:text-7xl font-bold;
+    }
+    h2 {
+        @apply text-2xl md:text-4xl lg:text-5xl;
+    }
+
     .tag {
         @apply p-3 shadow-lg text-center
         hover:scale-110 transition duration-200 ease-in-out;
