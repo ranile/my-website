@@ -35,3 +35,23 @@ const pageDescription = description === '' ? "I am a developer and I build web a
         classes.remove('dark')
     }
 </script>
+
+<script type="module">
+
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyC8hbZ4rP2tFwodQ95fAdSHPjOVgcKi04o",
+        authDomain: "mhamza-dev.firebaseapp.com",
+        projectId: "mhamza-dev",
+        storageBucket: "mhamza-dev.appspot.com",
+        messagingSenderId: "536388022064",
+        appId: "1:536388022064:web:0484ca633101011b0b22f5",
+        measurementId: "G-9837EENVKY"
+    };
+
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+</script>
