@@ -9,10 +9,10 @@ export default function Header() {
                 </h3>
             </a>
             <nav className="flex gap-4">
-                <AnimatedBottomBorderLink href="/#projects">Projects</AnimatedBottomBorderLink>
-                <AnimatedBottomBorderLink href="/#skills">Skills</AnimatedBottomBorderLink>
-                <AnimatedBottomBorderLink href="/#contact">Contact</AnimatedBottomBorderLink>
-                <AnimatedBottomBorderLink href="/blog">Blog</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/#projects" pb="1">Projects</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/#skills" pb="1">Skills</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/#contact" pb="1">Contact</AnimatedBottomBorderLink>
+                <AnimatedBottomBorderLink href="/blog" pb="1">Blog</AnimatedBottomBorderLink>
             </nav>
         </header>
     )

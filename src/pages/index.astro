@@ -2,6 +2,9 @@
 import ProjectsList from '../components/ProjectsList.astro'
 import AnimatedBottomBorderLink from '../components/AnimatedBottomBorderLink'
 import BaseLayout from '../layouts/BaseLayout.astro'
+import ResumeIcon from '../icons/Resume.tsx'
+import GitHubIcon from '../icons/GitHub.tsx'
+import LinkedInIcon from '../icons/LinkedIn.tsx'
 ---
 <BaseLayout>
     <style lang="scss" slot="styles">
@@ -31,14 +34,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
         <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
 
         <div class="flex gap-4 justify-center">
-            <AnimatedBottomBorderLink href="#" className="pb-14 hover:before:w-12">
-                <img class="link-button" id="resume-icon" src="/icons/resume-icon-dark.svg">
+            <AnimatedBottomBorderLink href="#">
+                <ResumeIcon />
             </AnimatedBottomBorderLink>
-            <AnimatedBottomBorderLink href="https://github.com/hamza1311/" className="pb-14 hover:before:w-12">
-                <img class="link-button" src="/icons/GitHub-Dark.png">
+            <AnimatedBottomBorderLink href="https://github.com/hamza1311/" target="_blank">
+                <GitHubIcon />
             </AnimatedBottomBorderLink>
-            <AnimatedBottomBorderLink href="https://www.linkedin.com/in/hamza1311/" className="pb-14 hover:before:w-12">
-                <img class="link-button" src="/icons/LinkedIn.png">
+            <AnimatedBottomBorderLink href="https://www.linkedin.com/in/hamza1311/" target="_blank">
+                <LinkedInIcon />
             </AnimatedBottomBorderLink>
         </div>
     </section>
@@ -68,9 +71,8 @@ import BaseLayout from '../layouts/BaseLayout.astro'
     <section class="data-section mb-12" id="contact">
         <h2>Contact</h2>
 
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
             <a href="mailto:muhammadhamza1311@gmail.com" class="tag">Email</a>
-            <button class="tag">Discord</button>
             <a href="https://matrix.to/#/@weeb69:matrix.org" target="_blank" class="tag">Matrix</a>
         </div>
     </section>

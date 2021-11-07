@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro'
-import BlogPostPreview from '../../components/BlogPostPreview.jsx'
+import BlogPostPreview from '../../components/BlogPostPreview.tsx'
 
 let allPosts = Astro.fetchContent('./*.md');
 allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
