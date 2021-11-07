@@ -41,7 +41,7 @@ const projects = [
                     {it.languages.map(lang => <span class="text-sm">{lang}</span>)}
                 </section>
 
-                <AnimatedBottomBorderLink href={`https://github.com/${it.link}`} target="_blank">
+                <AnimatedBottomBorderLink href={`https://github.com/${it.link}`} target="_blank" ariaLabel={`${it.title} on GitHub`}>
                     <GitHubIcon dimensions={8} />
                 </AnimatedBottomBorderLink>
             </div>

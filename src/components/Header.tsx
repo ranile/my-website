@@ -25,7 +25,7 @@ export default function Header() {
                 <AnimatedBottomBorderLink href="/#contact" pb="1">Contact</AnimatedBottomBorderLink>
                 <AnimatedBottomBorderLink href="/blog" pb="1">Blog</AnimatedBottomBorderLink>
 
-                <button onClick={toggleDarkMode}>
+                <button onClick={toggleDarkMode} aria-label="Toggle Dark Mode">
                     {
                         darkModeEnabled ?
                             <LightModeIcon dimensions={6} className={themeChangeIconClasses} /> :
