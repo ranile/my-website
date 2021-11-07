@@ -1,7 +1,7 @@
 name: Publish website
 on:
   workflow_run:
-    workflows: ["Build website"]
+    workflows: [ "Build website" ]
     types:
       - completed
 
@@ -61,9 +61,9 @@ jobs:
         run: |
           echo "${{ env.CHANNEL_ID }}"
 
-       - name: Deploy to Firebase
-         uses: FirebaseExtended/action-hosting-deploy@v0
-         with:
-           repoToken: "${{ secrets.GITHUB_TOKEN }}"
-           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
-           channelId: "${{ env.CHANNEL_ID }}"
+      - name: Deploy to Firebase
+        uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
+          channelId: "${{ env.CHANNEL_ID }}"
