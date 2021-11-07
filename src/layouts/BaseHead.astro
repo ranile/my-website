@@ -23,3 +23,15 @@ const pageDescription = description === '' ? "I am a developer and I build web a
 
 <meta name="twitter:title" content={pageTitle}>
 <meta name="twitter:description" content={pageDescription}>
+
+<script defer>
+    // this script exists to make the transition to light mode (if enabled) almost-instant
+    // the react component takes a second to load and dark mode flash is annoying
+    // the toggle button doesn't properly reflect the change but i have no idea how to solve that
+        
+    const enabled = localStorage.getItem('theme') === 'dark'
+    const classes = document.querySelector('html').classList
+    if (!enabled) {
+        classes.remove('dark')
+    }
+</script>
