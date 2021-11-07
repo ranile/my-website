@@ -62,13 +62,8 @@ jobs:
           echo "${{ env.CHANNEL_ID }}"
 
       - name: Deploy to Firebase
-        uses: siku2/action-hosting-deploy@v1
+      - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: "${{ secrets.GITHUB_TOKEN }}"
           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
           channelId: "${{ env.CHANNEL_ID }}"
-
-          commentURLPath: "/"
-          prNumber: "${{ env.PR_NUMBER }}"
-          prBranchName: "${{ env.PR_BRANCH }}"
-          commitSHA: "${{ env.COMMIT_SHA }}"
