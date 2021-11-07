@@ -15,7 +15,7 @@ html {
     }
 
     .tag {
-        @apply p-3 shadow-lg text-center
+        @apply p-3 text-center shadow-lg dark:shadow-xl
         hover:scale-110 transition duration-200 ease-in-out;
     }
 
