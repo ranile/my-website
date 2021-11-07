@@ -2,14 +2,14 @@
 import Head from './BaseHead.astro'
 import Header from '../components/Header.tsx'
 
-const { title = '' } = Astro.props;
+const { title = '', description = '' } = Astro.props;
 ---
 
 <html lang="en" class="dark"> <!-- class="dark" -->
 <head>
-    <Head title={title} />
+    <Head title={title} description={description} />
 
-    <slot name="styles" />
+    <slot name="head" />
 </head>
 
 <body class="bg-white text-black dark:bg-background-dark dark:text-white">

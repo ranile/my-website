@@ -5,9 +5,14 @@ import BaseLayout from '../layouts/BaseLayout.astro'
 import ResumeIcon from '../icons/Resume.tsx'
 import GitHubIcon from '../icons/GitHub.tsx'
 import LinkedInIcon from '../icons/LinkedIn.tsx'
+
+const metaUrl = "https://mhamza.dev"
 ---
 <BaseLayout>
-    <style lang="scss" slot="styles">
+    <meta slot="head" name="og:url" content={metaUrl} />
+    <meta slot="head" name="twitter:url" content={metaUrl} />
+
+    <style lang="scss" slot="head">
     .link-button {
         max-height: 48px;
         max-width: 48px;

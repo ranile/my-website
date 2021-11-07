@@ -2,20 +2,26 @@
 import BaseLayout from '../../layouts/BaseLayout.astro'
 import BlogPostPreview from '../../components/BlogPostPreview.tsx'
 
-let allPosts = Astro.fetchContent('./*.md');
-allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate));
+let allPosts = Astro.fetchContent('./*.md')
+allPosts = allPosts.sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+
+const metaUrl = "https://mhamza.dev/blog"
+const description = "Welcome to my blog. Here you'll find all the random content that I'll be posting"
 ---
 
-<BaseLayout title="Blog">
-<main class="flex flex-col w-full items-center">
-    <section class="mt-24 mx-14 md:w-1/2">
-        <h1>Blog</h1>
-        <p class="py-4 text-lg">Welcome to my blog. Here you'll find all the random content that I'll be posting</p>
-        <hr class="border-pink-400 border-t-2"/>
-    </section>
+<BaseLayout title="Blog" description={description}>
+    <meta slot="head" name="og:url" content={metaUrl} />
+    <meta slot="head" name="twitter:url" content={metaUrl} />
+        
+    <main class="flex flex-col w-full items-center">
+        <section class="mt-24 mx-14 md:w-1/2">
+            <h1>Blog</h1>
+            <p class="py-4 text-lg">{description}</p>
+            <hr class="border-pink-400 border-t-2"/>
+        </section>
 
-    <section class="my-8 mx-14 flex flex-col gap-6 md:w-1/2">
-        {allPosts.map(({title, date, description, url}) => <BlogPostPreview title={title} date={date} description={description} url={url} />)}
-    </section>
-</main>
+        <section class="my-8 mx-14 flex flex-col gap-6 md:w-1/2">
+            {allPosts.map(({title, date, description, url}) => <BlogPostPreview title={title} date={date} description={description} url={url} />)}
+        </section>
+    </main>
 </BaseLayout>

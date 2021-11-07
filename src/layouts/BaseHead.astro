@@ -1,13 +1,25 @@
 ---
-const { title = '' } = Astro.props; 
-const pageTitlePrefix = title === '' ? '' : `${title} |`
+const { title = '', description } = Astro.props; 
+const pageTitlePrefix = title === '' ? '' : `${title} | `
+
+const pageTitle = `${pageTitlePrefix}Muhammad Hamza`
+const pageDescription = description === '' ? "I am a developer and I build web applications" : description
 ---
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width">
-<title>{pageTitlePrefix} Muhammad Hamza</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>{pageTitle}</title>
+<meta name="description" content={description}>
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="alternate icon" href="/favicon.ico">
 
 <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+
+<meta name="og:type" content="website">
+<meta name="og:title" content={pageTitle}>
+<meta name="og:description" content={pageDescription}>
+
+<meta name="twitter:title" content={pageTitle}>
+<meta name="twitter:description" content={pageDescription}>
