@@ -46,22 +46,24 @@ jobs:
             echo "pr number invalid"
             exit 1
           fi
+          pr_branch="${{ github.event.workflow_run.head_branch }}"
           echo "PR_NUMBER=$pr_number" >> $GITHUB_ENV
           echo "PR_BRANCH=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_ENV
           echo "COMMIT_SHA=${{ github.event.workflow_run.head_sha }}" >> $GITHUB_ENV
+          echo "CHANNEL_ID=pr$pr_number-$pr_branch" >> $GITHUB_ENV
 
       - if: github.event.workflow_run.event == 'push'
         name: Apply push environment
         run: |
           echo "CHANNEL_ID=live" >> $GITHUB_ENV
 
-      - name: debug
+      - name: Debug (echo CHANNEL_ID)
         run: |
           echo "${{ env.CHANNEL_ID }}"
 
-      # - name: Deploy to Firebase
-      #   uses: FirebaseExtended/action-hosting-deploy@v0
-      #   with:
-      #     repoToken: "${{ secrets.GITHUB_TOKEN }}"
-      #     firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
-      #     channelId: "${{ env.CHANNEL_ID }}"
+       - name: Deploy to Firebase
+         uses: FirebaseExtended/action-hosting-deploy@v0
+         with:
+           repoToken: "${{ secrets.GITHUB_TOKEN }}"
+           firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
+           channelId: "${{ env.CHANNEL_ID }}"
