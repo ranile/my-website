@@ -32,10 +32,6 @@ export default function Header() {
                             <DarkModeIcon dimensions={6} className={themeChangeIconClasses} />
                     }
                 </button>
-
-                <button>
-
-                </button>
             </nav>
         </header>
     )
