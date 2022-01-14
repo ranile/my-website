@@ -2,23 +2,23 @@ import { useEffect, useState } from "react"
 
 const useDarkMode = (): [boolean, (value: boolean) => void] => {
     const [isDarkModeEnabled, setIsDarkModeEnabled] = useState(true)
-    const setEnabled = (value: boolean) => { 
+    const setEnabled = (value: boolean) => {
         if (value) {
-            localStorage.setItem('theme', 'dark')
+            localStorage.setItem("theme", "dark")
         } else {
-            localStorage.removeItem('theme')
+            localStorage.removeItem("theme")
         }
-        setIsDarkModeEnabled(value) 
+        setIsDarkModeEnabled(value)
     }
 
     useEffect(() => {
-        const enabled = localStorage.getItem('theme') === 'dark'
-        const classes = document.querySelector('html').classList
+        const enabled = localStorage.getItem("theme") === "dark"
+        const classes = document.querySelector("html").classList
         setEnabled(enabled)
         if (enabled) {
-            classes.add('dark')
+            classes.add("dark")
         } else {
-            classes.remove('dark')
+            classes.remove("dark")
         }
     }, [isDarkModeEnabled])
 

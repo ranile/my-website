@@ -1,45 +1,47 @@
 ---
-const { title = '', description } = Astro.props; 
-const pageTitlePrefix = title === '' ? '' : `${title} | `
+const { title = "", description } = Astro.props
+const pageTitlePrefix = title === "" ? "" : `${title} | `
 
 const pageTitle = `${pageTitlePrefix}Muhammad Hamza`
-const pageDescription = description === '' ? "I am a developer and I build web applications" : description
+const pageDescription =
+    description === ""
+        ? "I am a developer and I build web applications"
+        : description
 ---
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
 
 <title>{pageTitle}</title>
-<meta name="description" content={pageDescription}>
+<meta name="description" content={pageDescription} />
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-<link rel="alternate icon" href="/favicon.ico">
+<link rel="alternate icon" href="/favicon.ico" />
 
-<link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+<link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
 
-<meta name="og:type" content="website">
-<meta name="og:title" content={pageTitle}>
-<meta name="og:description" content={pageDescription}>
+<meta name="og:type" content="website" />
+<meta name="og:title" content={pageTitle} />
+<meta name="og:description" content={pageDescription} />
 
-<meta name="twitter:title" content={pageTitle}>
-<meta name="twitter:description" content={pageDescription}>
+<meta name="twitter:title" content={pageTitle} />
+<meta name="twitter:description" content={pageDescription} />
 
 <script defer>
     // this script exists to make the transition to light mode (if enabled) almost-instant
     // the react component takes a second to load and dark mode flash is annoying
     // the toggle button doesn't properly reflect the change but i have no idea how to solve that
 
-    const enabled = localStorage.getItem('theme') === 'dark'
-    const classes = document.querySelector('html').classList
+    const enabled = localStorage.getItem("theme") === "dark"
+    const classes = document.querySelector("html").classList
     if (!enabled) {
-        classes.remove('dark')
+        classes.remove("dark")
     }
 </script>
 
 <script type="module">
-
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js";
-    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js";
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-app.js"
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.3.0/firebase-analytics.js"
 
     const firebaseConfig = {
         apiKey: "AIzaSyC8hbZ4rP2tFwodQ95fAdSHPjOVgcKi04o",
@@ -48,10 +50,10 @@ const pageDescription = description === '' ? "I am a developer and I build web a
         storageBucket: "mhamza-dev.appspot.com",
         messagingSenderId: "536388022064",
         appId: "1:536388022064:web:0484ca633101011b0b22f5",
-        measurementId: "G-9837EENVKY"
-    };
+        measurementId: "G-9837EENVKY",
+    }
 
     // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-    const analytics = getAnalytics(app);
+    const app = initializeApp(firebaseConfig)
+    const analytics = getAnalytics(app)
 </script>

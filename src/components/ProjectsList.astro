@@ -1,51 +1,55 @@
 ---
-import AnimatedBottomBorderLink from './AnimatedBottomBorderLink.tsx'
-import GitHubIcon from '../icons/GitHub.tsx'
+import AnimatedBottomBorderLink from "./AnimatedBottomBorderLink.tsx"
+import GitHubIcon from "../icons/GitHub.tsx"
 
 const projects = [
     {
-        title: 'Reqwasm',
-        link: 'hamza1311/reqwasm',
-        description: 'HTTP requests library for WASM Apps',
-        languages: ['Rust']
+        title: "Reqwasm",
+        link: "hamza1311/reqwasm",
+        description: "HTTP requests library for WASM Apps",
+        languages: ["Rust"],
     },
     {
-        title: 'Gloo',
-        link: 'rustwasm/gloo',
-        description: 'A modular toolkit for building fast, reliable Web applications and libraries with Rust and WASM',
-        languages: ['Rust']
+        title: "Gloo",
+        link: "rustwasm/gloo",
+        description:
+            "A modular toolkit for building fast, reliable Web applications and libraries with Rust and WASM",
+        languages: ["Rust"],
     },
     {
-        title: 'Dear Diary',
-        link: 'hamza1311/dear-diary-web',
-        description: ' A simple diary web app ',
-        languages: ['TypeScript', 'Next.JS']
+        title: "Dear Diary",
+        link: "hamza1311/dear-diary-web",
+        description: " A simple diary web app ",
+        languages: ["TypeScript", "Next.JS"],
     },
 ]
 ---
 
 <div class="flex flex-col m-4 gap-8 lg:flex-row lg:gap-6">
-    {projects.map(it => (
-        <article class="flex flex-col items-center h-56 max-w-sm w-96 px-5 gap-5 shadow-lg dark:shadow-xl
-            hover:scale-105 transition duration-300 ease-in-out">
-            <h3 class="text-xl font-bold pt-4">
-                {it.title}
-            </h3>
+    {projects.map((it) => (
+        <article
+            class="flex flex-col items-center h-56 max-w-sm w-96 px-5 gap-5 shadow-lg dark:shadow-xl
+            hover:scale-105 transition duration-300 ease-in-out"
+        >
+            <h3 class="text-xl font-bold pt-4">{it.title}</h3>
 
-            <p class="text-center mb-auto">
-                {it.description}
-            </p>
+            <p class="text-center mb-auto">{it.description}</p>
 
             <div class="flex flex-col items-center gap-5 pb-2">
                 <section class="flex gap-4">
-                    {it.languages.map(lang => <span class="text-sm">{lang}</span>)}
+                    {it.languages.map((lang) => (
+                        <span class="text-sm">{lang}</span>
+                    ))}
                 </section>
 
-                <AnimatedBottomBorderLink href={`https://github.com/${it.link}`} target="_blank" ariaLabel={`${it.title} on GitHub`}>
+                <AnimatedBottomBorderLink
+                    href={`https://github.com/${it.link}`}
+                    target="_blank"
+                    ariaLabel={`${it.title} on GitHub`}
+                >
                     <GitHubIcon dimensions={8} />
                 </AnimatedBottomBorderLink>
             </div>
-            
-    </article>
+        </article>
     ))}
 </div>
