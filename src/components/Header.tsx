@@ -1,7 +1,7 @@
-import AnimatedBottomBorderLink from './AnimatedBottomBorderLink'
-import DarkModeIcon from '../icons/DarkMode'
-import LightModeIcon from '../icons/LightMode'
-import useDarkMode from '../hooks/useDarkMode'
+import AnimatedBottomBorderLink from "./AnimatedBottomBorderLink"
+import DarkModeIcon from "../icons/DarkMode"
+import LightModeIcon from "../icons/LightMode"
+import useDarkMode from "../hooks/useDarkMode"
 
 export default function Header() {
     const [darkModeEnabled, setDarkModeEnabled] = useDarkMode()
@@ -11,7 +11,7 @@ export default function Header() {
     }
 
     const themeChangeIconClasses =
-        'w-6 h-6 transition ease-linear duration-200 dark:hover:text-pink-500'
+        "w-6 h-6 transition ease-linear duration-200 dark:hover:text-pink-500"
     return (
         <header className="flex items-center justify-between px-5 md:px-20 py-6 shadow dark:shadow-lg">
             <a href="/">

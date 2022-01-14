@@ -1,4 +1,4 @@
-import SvgBase from './SvgBase'
+import SvgBase from "./SvgBase"
 
 const Resume = (props: any) => (
     <SvgBase viewBox="0 0 64 65" {...props}>
@@ -6,7 +6,7 @@ const Resume = (props: any) => (
         <path d="M42,50H22V46H42Zm0-8H22V38H42Z" />
         <text
             xmlns="http://www.w3.org/2000/svg"
-            style={{ fontSize: 12, fontWeight: 700, letterSpacing: '0.07em' }}
+            style={{ fontSize: 12, fontWeight: 700, letterSpacing: "0.07em" }}
             transform="translate(22 35)"
         >
             CV

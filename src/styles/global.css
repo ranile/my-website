@@ -20,7 +20,7 @@ html {
     }
 
     .contact-button {
-        @apply tag  hover:scale-110 duration-300
+        @apply tag  hover:scale-110 duration-300;
     }
 
     .blog-article a {

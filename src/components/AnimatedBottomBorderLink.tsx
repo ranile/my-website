@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren } from "react"
 
 type Props = PropsWithChildren<{
     href: string
@@ -11,22 +11,22 @@ type Props = PropsWithChildren<{
 const AnimatedBottomBorderLink = ({
     children,
     href,
-    pb = '2',
-    className = '',
+    pb = "2",
+    className = "",
     target,
     ariaLabel,
 }: Props) => {
     const props = {}
     if (ariaLabel) {
-        props['aria-label'] = ariaLabel
+        props["aria-label"] = ariaLabel
     }
 
     if (target) {
-        props['target'] = target
+        props["target"] = target
     }
 
-    if (target === '_blank') {
-        props['rel'] = 'noopener'
+    if (target === "_blank") {
+        props["rel"] = "noopener"
     }
 
     return (

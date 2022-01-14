@@ -1,4 +1,4 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren } from "react"
 
 type Props = PropsWithChildren<{
     viewBox: string
@@ -10,9 +10,9 @@ type Props = PropsWithChildren<{
 const SvgBase = (props: Props) => {
     const {
         children,
-        viewBox = '0 0 24 24',
+        viewBox = "0 0 24 24",
         dimensions = 12,
-        className = '',
+        className = "",
         rest,
     } = props
 

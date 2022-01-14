@@ -1,4 +1,4 @@
-import SvgBase from './SvgBase'
+import SvgBase from "./SvgBase"
 
 // SVG from material icons (dark-mode icon)
 const DarkMode = (props: any) => (
