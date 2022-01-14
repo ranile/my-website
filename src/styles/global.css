@@ -16,7 +16,11 @@ html {
 
     .tag {
         @apply p-3 text-center shadow-lg dark:shadow-xl
-        hover:scale-110 transition duration-200 ease-in-out;
+        hover:-translate-y-2 transition duration-200 ease-in-out;
+    }
+
+    .contact-button {
+        @apply tag  hover:scale-110 duration-300
     }
 
     .blog-article a {
