@@ -5,7 +5,7 @@
         "esModuleInterop": true,
         "resolveJsonModule": true,
         "forceConsistentCasingInFileNames": true,
-        "useUnknownInCatchVariables": true,
+        "useUnknownInCatchVariables": true
     },
     "moduleResolution": "node"
 }

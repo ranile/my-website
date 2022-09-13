@@ -4,10 +4,8 @@ import BlogPostPreview from "../../components/BlogPostPreview.tsx"
 
 let allPosts = await Astro.glob("./*.md")
 allPosts = allPosts
-    .map(it => ({ ...(it.frontmatter), url: it.url }))
-    .sort(
-        (a, b) => new Date(b.publishDate) - new Date(a.publishDate),
-    )
+    .map((it) => ({ ...it.frontmatter, url: it.url }))
+    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
 console.log(allPosts)
 
 const metaUrl = "https://mhamza.dev/blog"
@@ -27,14 +25,16 @@ const description =
         </section>
 
         <section class="my-8 mx-14 flex flex-col gap-6 md:w-1/2">
-            {allPosts.map(({ title, date, description, url }) => (
-                <BlogPostPreview
-                    title={title}
-                    date={date}
-                    description={description}
-                    url={url}
-                />
-            ))}
+            {
+                allPosts.map(({ title, date, description, url }) => (
+                    <BlogPostPreview
+                        title={title}
+                        date={date}
+                        description={description}
+                        url={url}
+                    />
+                ))
+            }
         </section>
     </main>
 </BaseLayout>

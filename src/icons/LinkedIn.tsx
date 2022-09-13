@@ -1,6 +1,5 @@
 import SvgBase, { Props as SvgProps } from "./SvgBase"
 
-
 // SVG from
 // https://github.com/mui-org/material-ui/blob/3f58dd9208c5aa8daed74c74d97cd63c2c35a785/packages/mui-icons-material/custom/LinkedIn.js#L5
 const LinkedIn = (props: SvgProps) => (

@@ -1,6 +1,5 @@
 import SvgBase, { Props as SvgProps } from "./SvgBase"
 
-
 // SVG from material icons (light-mode icon)
 const LightMode = (props: SvgProps) => (
     <SvgBase {...props}>

@@ -17,9 +17,9 @@ const AnimatedBottomBorderLink = ({
     ariaLabel,
 }: Props) => {
     const props: {
-        'aria-label'?: string,
-        target?: string,
-        rel?: string,
+        "aria-label"?: string
+        target?: string
+        rel?: string
     } = {}
     if (ariaLabel) {
         props["aria-label"] = ariaLabel

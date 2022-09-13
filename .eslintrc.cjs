@@ -8,37 +8,26 @@ module.exports = {
         "plugin:import/typescript",
         "plugin:astro/recommended",
         "prettier",
-        "plugin:tailwindcss/recommended"
+        "plugin:tailwindcss/recommended",
     ],
     parserOptions: {
-        ecmaVersion: 'latest',
-        sourceType: 'module',
+        ecmaVersion: "latest",
+        sourceType: "module",
     },
-    plugins: [
-        "react",
-        "@typescript-eslint",
-        "import",
-        "tailwindcss"
-    ],
+    plugins: ["react", "@typescript-eslint", "import", "tailwindcss"],
     settings: {
         react: {
             version: "detect",
-        }
+        },
     },
     rules: {
-        indent: [
-            "error",
-            4
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
-        "tailwindcss/no-custom-classname": "off"
+        indent: ["error", 4],
+        "linebreak-style": ["error", "unix"],
+        "tailwindcss/no-custom-classname": "off",
     },
     overrides: [
         {
-            files: ['*.ts', '*.tsx'],
+            files: ["*.ts", "*.tsx"],
             extends: [
                 "plugin:@typescript-eslint/recommended",
                 "plugin:@typescript-eslint/recommended-requiring-type-checking",
@@ -47,29 +36,25 @@ module.exports = {
                 "plugin:react/jsx-runtime",
             ],
             parserOptions: {
-                project: ['./tsconfig.json'],
+                project: ["./tsconfig.json"],
                 ecmaFeatures: {
-                    jsx: true
+                    jsx: true,
                 },
                 ecmaVersion: 13,
                 sourceType: "module",
                 rules: {
-                    "react/react-in-jsx-scope": "off"
-                }
+                    "react/react-in-jsx-scope": "off",
+                },
             },
         },
         {
-            files: [
-                "*.astro"
-            ],
+            files: ["*.astro"],
             parser: "astro-eslint-parser",
             parserOptions: {
                 parser: "@typescript-eslint/parser",
-                extraFileExtensions: [
-                    ".astro"
-                ]
+                extraFileExtensions: [".astro"],
             },
-            rules: {}
-        }
-    ]
+            rules: {},
+        },
+    ],
 }
