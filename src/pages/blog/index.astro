@@ -6,7 +6,6 @@ let allPosts = await Astro.glob("./*.md")
 allPosts = allPosts
     .map((it) => ({ ...it.frontmatter, url: it.url }))
     .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
-console.log(allPosts)
 
 const metaUrl = "https://mhamza.dev/blog"
 const description =

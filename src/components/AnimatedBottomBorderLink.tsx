@@ -38,7 +38,7 @@ const AnimatedBottomBorderLink = ({
             href={href}
             {...props}
             className={`
-            pb- relative${pb}
+            pb-${pb} relative
             before:absolute
             before:bottom-0 before:inline before:h-0.5 before:w-0 before:bg-pink-500 before:transition-all
             before:duration-200 before:ease-in hover:before:w-full

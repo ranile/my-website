@@ -1,10 +1,10 @@
 import { PropsWithChildren } from "react"
 
 export type Props = PropsWithChildren<{
-    viewBox: string
-    dimensions: number
-    className: string
-    rest: unknown
+    viewBox?: string
+    dimensions?: number
+    className?: string
+    rest?: object
 }>
 
 const SvgBase = (props: Props) => {
@@ -22,7 +22,7 @@ const SvgBase = (props: Props) => {
             xmlns="http://www.w3.org/2000/svg"
             className={classes}
             viewBox={viewBox}
-            {...(rest as object)}
+            {...rest}
         >
             {props.children}
         </svg>
