@@ -13,9 +13,9 @@ export default function Header() {
     const themeChangeIconClasses =
         "w-6 h-6 transition ease-linear duration-200 dark:hover:text-pink-500"
     return (
-        <header className="flex items-center justify-between px-5 md:px-20 py-6 shadow dark:shadow-lg">
+        <header className="flex items-center justify-between px-5 py-6 shadow dark:shadow-lg md:px-20">
             <a href="/">
-                <h3 className="rounded-full border-2 border-pink-500 h-8 w-8 flex items-center justify-center">
+                <h3 className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-pink-500">
                     H
                 </h3>
             </a>

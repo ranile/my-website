@@ -1,4 +1,4 @@
-type Props = { title: string; date: string; description: string; url: string }
+interface Props { title: string; date: string; description: string; url: string }
 
 export default function BlogPostPreview({
     title,
@@ -6,11 +6,15 @@ export default function BlogPostPreview({
     description,
     url,
 }: Props) {
+    console.log({title,
+        date,
+        description,
+        url,})
     return (
         <a href={url}>
-            <article className="flex flex-col gap-2 bg-pink-200 bg-opacity-20 p-4 rounded-2xl hover:scale-105 transition duration-200 shadow-md dark:shadow-xl">
+            <article className="flex flex-col gap-2 rounded-2xl bg-pink-200/20 p-4 shadow-md transition duration-200 hover:scale-105 dark:shadow-xl">
                 <span className="text-sm">{date}</span>
-                <h3 className="text-xl md:text-xl lg:text-2xl font-bold">
+                <h3 className="text-xl font-bold md:text-xl lg:text-2xl">
                     {title}
                 </h3>
                 <p>{description}</p>

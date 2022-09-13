@@ -1,4 +1,6 @@
 ---
+import '../styles/global.css'
+
 const { title = "", description } = Astro.props
 const pageTitlePrefix = title === "" ? "" : `${title} | `
 
@@ -17,8 +19,6 @@ const pageDescription =
 
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <link rel="alternate icon" href="/favicon.ico" />
-
-<link rel="stylesheet" href={Astro.resolve("../styles/global.css")} />
 
 <meta name="og:type" content="website" />
 <meta name="og:title" content={pageTitle} />
@@ -55,5 +55,5 @@ const pageDescription =
 
     // Initialize Firebase
     const app = initializeApp(firebaseConfig)
-    const analytics = getAnalytics(app)
+    getAnalytics(app)
 </script>

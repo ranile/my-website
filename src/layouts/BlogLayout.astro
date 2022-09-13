@@ -5,8 +5,8 @@ const { content } = Astro.props
 ---
 
 <BaseLayout title={content.title} description={content.description}>
-    <main class="w-full flex justify-center py-8">
-        <article class="leading-7 flex flex-col gap-7 w-2/3 blog-article">
+    <main class="flex w-full justify-center py-8">
+        <article class="blog-article flex w-2/3 flex-col gap-7 leading-7">
             <h1 class="text-3xl md:text-4xl lg:text-6xl">{content.title}</h1>
             <slot />
         </article>

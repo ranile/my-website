@@ -16,17 +16,21 @@ const AnimatedBottomBorderLink = ({
     target,
     ariaLabel,
 }: Props) => {
-    const props = {}
+    const props: {
+        'aria-label'?: string,
+        target?: string,
+        rel?: string,
+    } = {}
     if (ariaLabel) {
         props["aria-label"] = ariaLabel
     }
 
     if (target) {
-        props["target"] = target
+        props.target = target
     }
 
     if (target === "_blank") {
-        props["rel"] = "noopener"
+        props.rel = "noopener"
     }
 
     return (
@@ -34,10 +38,10 @@ const AnimatedBottomBorderLink = ({
             href={href}
             {...props}
             className={`
-            relative pb-${pb}
-            hover:before:w-full
-            before:inline before:bg-pink-500 before:w-0 before:absolute before:h-0.5 before:bottom-0
-            before:transition-all before:duration-200 before:ease-in
+            pb- relative${pb}
+            before:absolute
+            before:bottom-0 before:inline before:h-0.5 before:w-0 before:bg-pink-500 before:transition-all
+            before:duration-200 before:ease-in hover:before:w-full
             ${className}
         `}
         >

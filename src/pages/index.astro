@@ -2,7 +2,6 @@
 import ProjectsList from "../components/ProjectsList.astro"
 import AnimatedBottomBorderLink from "../components/AnimatedBottomBorderLink"
 import BaseLayout from "../layouts/BaseLayout.astro"
-import ResumeIcon from "../icons/Resume.tsx"
 import GitHubIcon from "../icons/GitHub.tsx"
 import LinkedInIcon from "../icons/LinkedIn.tsx"
 
@@ -33,14 +32,12 @@ const metaUrl = "https://mhamza.dev"
         <section class="data-section">
             <h1 class="text-center">
                 Hi, I am
-                <span class="text-pink-700 dark:text-pink-500"
-                    >Muhammad Hamza.</span
-                >
+                <span class="text-pink-700 dark:text-pink-500">Muhammad Hamza.</span>
             </h1>
             <h2>A Web Developer</h2>
             <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
 
-            <div class="flex gap-4 justify-center">
+            <div class="flex justify-center gap-4">
                 <!-- <AnimatedBottomBorderLink href="#" ariaLabel="My Resume">
                 <ResumeIcon className="w-12" />
             </AnimatedBottomBorderLink> -->
@@ -70,7 +67,7 @@ const metaUrl = "https://mhamza.dev"
         <section class="data-section" id="skills">
             <h2>Skills</h2>
 
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-5">
+            <div class="grid grid-cols-2 gap-5 md:grid-cols-3">
                 <span class="tag">Rust</span>
                 <span class="tag">Yew</span>
                 <span class="tag">TypeScript</span>
@@ -85,7 +82,7 @@ const metaUrl = "https://mhamza.dev"
         <section class="data-section mb-12" id="contact">
             <h2>Contact</h2>
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
                 <a
                     href="mailto:muhammadhamza1311@gmail.com"
                     class="contact-button">Email</a

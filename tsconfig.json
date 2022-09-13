@@ -1,3 +1,11 @@
 {
+    "compilerOptions": {
+        "strict": true,
+        "jsx": "preserve",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "forceConsistentCasingInFileNames": true,
+        "useUnknownInCatchVariables": true,
+    },
     "moduleResolution": "node"
 }
