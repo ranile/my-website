@@ -1,0 +1,61 @@
+{
+    "name": "Elina",
+    "title": "Software Developer",
+    "projects": [
+        {
+            "title": "Yew",
+            "github": "yewstack/yew",
+            "description": "A framework for creating reliable and efficient web applications",
+            "languages": [
+                "Rust",
+                "WebAssembly"
+            ]
+        },
+        {
+            "title": "WASM Bindgen",
+            "github": "rustwasm/wasm-bindgen",
+            "description": "Facilitating high-level interactions between Wasm modules and JavaScript",
+            "languages": [
+                "Rust",
+                "WebAssembly"
+            ]
+        },
+        {
+            "title": "Gloo",
+            "github": "rustwasm/gloo",
+            "description": "A modular toolkit for building fast, reliable Web applications and libraries with Rust and WASM",
+            "languages": [
+                "Rust",
+                "WebAssembly"
+            ]
+        },
+        {
+            "title": "Firestorm",
+            "github": "hamza1311/firestorm",
+            "description": "End to end encrypted messaging platform ",
+            "languages": [
+                "SvelteKit",
+                "Supabase",
+                "Rust",
+                "WebAssembly"
+            ]
+        }
+    ],
+    "github": "hamza1311",
+    "linkedin": "hamza1311",
+    "skills": [
+        "Rust",
+        "Yew",
+        "TypeScript",
+        "React",
+        "Next",
+        "Kotlin",
+        "HTML",
+        "CSS"
+    ],
+    "contacts": {
+        "Email": "imelina@elina.website",
+        "Matrix": "https://matrix.to/#/@weeb69:matrix.org",
+        "Skype": "https://join.skype.com/invite/x8AE3hSWgddE"
+    }
+}

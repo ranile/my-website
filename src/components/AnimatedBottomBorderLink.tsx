@@ -2,7 +2,7 @@ import { PropsWithChildren } from "react"
 
 type Props = PropsWithChildren<{
     href: string
-    pb: string
+    pb?: string
     className?: string
     target?: string
     ariaLabel?: string
