@@ -17,8 +17,7 @@ jobs:
           echo "build failed"
           exit 1
 
-      # need to checkout to get "firebase.json", ".firebaserc"
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
       - name: Download build artifact
         uses: dawidd6/action-download-artifact@v2
@@ -51,19 +50,3 @@ jobs:
           echo "PR_BRANCH=${{ github.event.workflow_run.head_branch }}" >> $GITHUB_ENV
           echo "COMMIT_SHA=${{ github.event.workflow_run.head_sha }}" >> $GITHUB_ENV
           echo "CHANNEL_ID=pr$pr_number-$pr_branch" >> $GITHUB_ENV
-
-      - if: github.event.workflow_run.event == 'push'
-        name: Apply push environment
-        run: |
-          echo "CHANNEL_ID=live" >> $GITHUB_ENV
-
-      - name: Debug (echo CHANNEL_ID)
-        run: |
-          echo "${{ env.CHANNEL_ID }}"
-
-      - name: Deploy to Firebase
-        uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: "${{ secrets.GITHUB_TOKEN }}"
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_MHAMZA_DEV }}'
-          channelId: "${{ env.CHANNEL_ID }}"
