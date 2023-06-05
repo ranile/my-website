@@ -1,13 +1,14 @@
 ---
 import "../styles/global.css"
+import config from "../../config.json"
 
 const { title = "", description } = Astro.props
 const pageTitlePrefix = title === "" ? "" : `${title} | `
 
-const pageTitle = `${pageTitlePrefix}Muhammad Hamza`
+const pageTitle = `${pageTitlePrefix}${config.name}`
 const pageDescription =
     description === ""
-        ? "I am a developer and I build web applications"
+        ? config.description
         : description
 ---
 

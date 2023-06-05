@@ -1,6 +1,7 @@
 {
     "name": "Elina",
     "title": "Software Developer",
+    "description": "Software Developer - working with latest technologies",
     "projects": [
         {
             "title": "Yew",
