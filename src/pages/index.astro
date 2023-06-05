@@ -1,9 +1,10 @@
 ---
 import ProjectsList from "../components/ProjectsList.astro"
-import AnimatedBottomBorderLink from "../components/AnimatedBottomBorderLink"
+import AnimatedBottomBorderLink from "../components/AnimatedBottomBorderLink.tsx"
 import BaseLayout from "../layouts/BaseLayout.astro"
 import GitHubIcon from "../icons/GitHub.tsx"
 import LinkedInIcon from "../icons/LinkedIn.tsx"
+import HoverableTag from "../components/HoverableTag.astro"
 
 const metaUrl = "https://mhamza.dev"
 ---
@@ -32,9 +33,9 @@ const metaUrl = "https://mhamza.dev"
         <section class="data-section">
             <h1 class="text-center">
                 Hi, I am
-                <span class="text-pink-700 dark:text-pink-500"
-                    >Muhammad Hamza.</span
-                >
+                <span class="text-pink-700 dark:text-pink-500">
+                    Muhammad Hamza.
+                </span>
             </h1>
             <h2>A Web Developer</h2>
             <p class="-mt-7 text-lg">and a lover of anime and technology.</p>
@@ -70,14 +71,14 @@ const metaUrl = "https://mhamza.dev"
             <h2>Skills</h2>
 
             <div class="grid grid-cols-2 gap-5 md:grid-cols-3">
-                <span class="tag">Rust</span>
-                <span class="tag">Yew</span>
-                <span class="tag">TypeScript</span>
-                <span class="tag">React</span>
-                <span class="tag">Next.JS</span>
-                <span class="tag">Kotlin</span>
-                <span class="tag">HTML</span>
-                <span class="tag">CSS</span>
+                <HoverableTag>Rust</HoverableTag>
+                <HoverableTag>Yew</HoverableTag>
+                <HoverableTag>TypeScript</HoverableTag>
+                <HoverableTag>React</HoverableTag>
+                <HoverableTag>Next.JS</HoverableTag>
+                <HoverableTag>Kotlin</HoverableTag>
+                <HoverableTag>HTML</HoverableTag>
+                <HoverableTag>CSS</HoverableTag>
             </div>
         </section>
 
@@ -85,27 +86,32 @@ const metaUrl = "https://mhamza.dev"
             <h2>Contact</h2>
 
             <div class="grid grid-cols-1 gap-5 md:grid-cols-3">
-                <a
+                <HoverableTag
+                    link={true}
                     href="mailto:muhammadhamza1311@gmail.com"
-                    class="contact-button">Email</a
+                    animation="hover:scale-110 duration-300"
                 >
-                <a
+                    Email
+                </HoverableTag>
+                <HoverableTag
+                  link={true}
                     href="https://matrix.to/#/@weeb69:matrix.org"
                     target="_blank"
-                    class="contact-button"
+                    animation="hover:scale-110 duration-300"
                     rel="noopener"
                 >
                     Matrix
-                </a>
+                </HoverableTag>
 
-                <a
+                <HoverableTag
+                  link={true}
                     href="https://join.skype.com/invite/x8AE3hSWgddE"
                     target="_blank"
-                    class="contact-button"
+                    animation="hover:scale-110 duration-300"
                     rel="noopener"
                 >
                     Skype
-                </a>
+                </HoverableTag>
             </div>
         </section>
     </main>

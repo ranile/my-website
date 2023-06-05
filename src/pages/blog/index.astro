@@ -1,13 +1,14 @@
 ---
 import BaseLayout from "../../layouts/BaseLayout.astro"
-import BlogPostPreview from "../../components/BlogPostPreview.tsx"
+import BlogPostPreview from "../../components/BlogPostPreview.astro"
 
-let allPosts = await Astro.glob("./*.md")
-allPosts = allPosts
-    .map((it) => ({ ...it.frontmatter, url: it.url }))
-    .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate))
+let allPosts = await Astro.glob("./*.md").then((allPosts) =>
+    allPosts
+        .map((it) => ({ ...it.frontmatter, url: it.url }))
+        .sort((a, b) => new Date(b.publishDate) - new Date(a.publishDate)),
+)
 
-const metaUrl = "https://mhamza.dev/blog"
+const metaUrl = Astro.site + "blog"
 const description =
     "Welcome to my blog. Here you'll find all the random content that I'll be posting"
 ---
@@ -23,7 +24,7 @@ const description =
             <hr class="border-t-2 border-pink-400" />
         </section>
 
-        <section class="my-8 mx-14 flex flex-col gap-6 md:w-1/2">
+        <section class="mx-14 my-8 flex flex-col gap-6 md:w-1/2">
             {
                 allPosts.map(({ title, date, description, url }) => (
                     <BlogPostPreview
