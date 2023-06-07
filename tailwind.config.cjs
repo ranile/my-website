@@ -8,6 +8,7 @@ module.exports = {
                     dark: "#303030",
                     light: "white",
                 },
+                "the-pink": "#B00B69",
             },
         },
     },
