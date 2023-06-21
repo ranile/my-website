@@ -6,21 +6,12 @@ html {
     scroll-behavior: smooth;
 }
 
-@layer components {
+@layer base {
     h1 {
         @apply text-4xl md:text-5xl lg:text-7xl font-bold;
     }
     h2 {
-        @apply text-2xl md:text-4xl lg:text-5xl;
-    }
-
-    .tag {
-        @apply p-3 text-center shadow-lg dark:shadow-xl
-        hover:-translate-y-2 transition duration-200 ease-in-out;
-    }
-
-    .contact-button {
-        @apply tag  hover:scale-110 duration-300;
+        @apply text-2xl md:text-4xl;
     }
 
     .blog-article a {
