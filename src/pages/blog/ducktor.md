@@ -1,3 +1,10 @@
+---
+layout: ../../layouts/BlogLayout.astro
+title: "Introducing ducktor: Duck typed constructors for Rust structs with wasm-bindgen JsValue" 
+date: Thursday, June 22 2023
+description: A macro to generate constructor to instantiate structs from JsValue using duck-typing.
+---
+
 # Introducing ducktor: Duck typed constructors for Rust structs with wasm-bindgen JsValue
 
 Interacting with JavaScript objects in WebAssembly can be challenging, especially when it comes libraries providing an ergonomic API for exported functions using wasm-bindgen. One specific limitation is the inability to pass bare objects directly to functions expecting exported types. This limitation becomes frustrating, particularly when working with shared code.
